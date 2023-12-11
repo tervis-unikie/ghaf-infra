@@ -73,6 +73,9 @@ class TargetHost:
 #  - TargetHost.nixosconfig: name of the target nixosConfiguration.
 TARGETS = OrderedDict(
     {
+        "tervis-servu": TargetHost(
+            hostname="172.18.8.242", nixosconfig="tervis-servu"
+        ),
         "ghafhydra-dev": TargetHost(
             hostname="ghafhydra.northeurope.cloudapp.azure.com", nixosconfig="ghafhydra"
         ),

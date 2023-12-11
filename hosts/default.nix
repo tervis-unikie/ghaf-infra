@@ -19,6 +19,10 @@
     # make self and inputs available in nixos modules
     specialArgs = {inherit self inputs;};
   in {
+    tervis-servu = lib.nixosSystem {
+      inherit specialArgs;
+      modules = [./tervis-servu/configuration.nix];
+    };
     ghafhydra = lib.nixosSystem {
       inherit specialArgs;
       modules = [./ghafhydra/configuration.nix];

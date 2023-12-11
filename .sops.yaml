@@ -1,42 +1,12 @@
 # SPDX-FileCopyrightText: 2023 Technology Innovation Institute (TII)
-#
 # SPDX-License-Identifier: Apache-2.0
 
 keys:
-  - &build01 age1tcp86swx4c8y8ej666k27lwca60j0x5tf4mcnw459ccec4am9vqqg2ht9d
-  - &flokli age1lvpj49ewyx9a4uxevl05wfevmqld2d25juc65acjqpmerzdpc9kq2kxdgs
-  - &ghafhydra age1qnufx7gvz5kmm48nvdma4chxd4p0lca88f5fsyce8lrae6gp2a8sul692y
-  - &hrosten age1hc6hszepd5xezxkgd3yx74pn3scxjm5w6px48m4rq9yj7w6rke7q72zhgn
-  - &karim age122lvqyrdqz30fkfututykl0yle9u63u2em6e4aut7e5draws83ns3npt3a
-  - &jrautiola age15jq5gjjd7ypsdlqfjtqy4red57v8ggqq9na6u3xffznu678nydpsuuwjg0
-  - &binarycache age1s47a3y44j695gemcl0kqgjlxxvaa50de9s69jy2l6vc8xtmk5pcskhpknl
-  - &monitoring age17s9sc2cgt9t30cyl65zya8p4zmwnndrx2r896e7gzgl08sjn0qmq3t6shs
+  - &tervis age1ehmv0gg6xmj8nguakmj6tnhdhphjfnfwzpfshfupcrv67djn49hqzehl6y
+  - &tervis-servu age10s55g3uvel6pwldnww2llf7dwhfka4xezv5lts73hhxv9r2xts5qt09dam
 creation_rules:
-  - path_regex: terraform/secrets.yaml$
+  - path_regex: secrets.yaml$
     key_groups:
     - age:
-      - *flokli
-      - *hrosten
-      - *karim
-  - path_regex: hosts/ghafhydra/secrets.yaml$
-    key_groups:
-    - age:
-      - *flokli
-      - *hrosten
-      - *ghafhydra
-  - path_regex: hosts/build01/secrets.yaml$
-    key_groups:
-    - age:
-      - *flokli
-      - *hrosten
-      - *build01
-  - path_regex: hosts/binarycache/secrets.yaml$
-    key_groups:
-    - age:
-      - *jrautiola
-      - *binarycache
-  - path_regex: hosts/monitoring/secrets.yaml$
-    key_groups:
-    - age:
-      - *jrautiola
-      - *monitoring
+      - *tervis
+      - *tervis-servu
